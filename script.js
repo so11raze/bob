@@ -61,7 +61,7 @@ function render() {
   list.innerHTML = teams
     .map(
       (t) =>
-        `<li><b>${t.team}</b><br>капитан ${t.captain} · ${t.discord}<br>${t.roster}</li>`
+        `<li><b>${t.team}</b><br>${t.captain} & ${t.partner} · ${t.discord}</li>`
     )
     .join("");
   empty.style.display = teams.length ? "none" : "block";
@@ -72,7 +72,7 @@ form.addEventListener("submit", (e) => {
   const data = Object.fromEntries(new FormData(form).entries());
   const teams = loadTeams();
   teams.unshift(data);
-  localStorage.setItem(KEY, JSON.stringify(teams.slice(0, 16)));
+  localStorage.setItem(KEY, JSON.stringify(teams.slice(0, 5)));
   form.reset();
   render();
 });
