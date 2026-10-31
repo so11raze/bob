@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SO2 CUP — Турнир Standoff 2 | 15 000 ₽</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Russo+One&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <canvas id="sparks" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <a class="logo" href="#top">
+      <span class="logo-mark">SO2</span>
+      <span class="logo-text">CUP</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#prize">Призы</a>
+      <a href="#format">Формат</a>
+      <a href="#schedule">Расписание</a>
+      <a href="#maps">Карты</a>
+      <a href="#register">Регистрация</a>
+    </nav>
+    <a class="btn btn-nav" href="#register">Вступить в бой</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hud hud-tl"></div>
+      <div class="hud hud-tr"></div>
+      <div class="hud hud-bl"></div>
+      <div class="hud hud-br"></div>
+
+      <p class="eyebrow">Открытый киберспортивный кубок · 5×5</p>
+      <h1>
+        STANDOFF 2
+        <span>TOURNAMENT</span>
+      </h1>
+      <p class="hero-lead">
+        Собери пятёрку. Забери сервер. Раздели призовой фонд
+        <strong>15 000 ₽</strong> среди лучших оперативников сезона.
+      </p>
+
+      <div class="prize-card">
+        <div class="prize-label">Призовой фонд</div>
+        <div class="prize-value" data-count="15000">0 ₽</div>
+        <div class="prize-split">
+          <span>1 место — 9 000 ₽</span>
+          <span>2 место — 4 000 ₽</span>
+          <span>3 место — 2 000 ₽</span>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#register">Зарегистрировать команду</a>
+        <a class="btn btn-ghost" href="#format">Правила и формат</a>
+      </div>
+    </section>
+
+    <section class="stats">
+      <article><b>16</b><span>слотов команд</span></article>
+      <article><b>5×5</b><span>классический режим</span></article>
+      <article><b>MR12</b><span>до 13 раундов</span></article>
+      <article><b>BO3</b><span>финальная сетка</span></article>
+    </section>
+
+    <section id="prize" class="section">
+      <header class="section-head">
+        <p>Награда</p>
+        <h2>Кто заберёт 15 000 ₽</h2>
+      </header>
+      <div class="podium">
+        <article class="place place-2">
+          <div class="rank">02</div>
+          <h3>Серебро</h3>
+          <p class="money">4 000 ₽</p>
+          <p>Финал. Ближе всех к титулу — и всё ещё в деньгах.</p>
+        </article>
+        <article class="place place-1">
+          <div class="rank">01</div>
+          <h3>Чемпион</h3>
+          <p class="money">9 000 ₽</p>
+          <p>Кубок SO2 CUP, статус первой пятёрки и львиная доля фонда.</p>
+        </article>
+        <article class="place place-3">
+          <div class="rank">03</div>
+          <h3>Бронза</h3>
+          <p class="money">2 000 ₽</p>
+          <p>Матч за третье место. Промахнулся в финале — не уходи без приза.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="format" class="section alt">
+      <header class="section-head">
+        <p>Боевой протокол</p>
+        <h2>Формат и правила</h2>
+      </header>
+      <div class="grid-2">
+        <ul class="rules">
+          <li><strong>Дисциплина:</strong> Standoff 2, Defuse 5 на 5.</li>
+          <li><strong>Сетка:</strong> 16 команд, Single Elimination.</li>
+          <li><strong>Группы / 1/8–1/4:</strong> BO1. Полуфинал и финал — BO3.</li>
+          <li><strong>Счёт:</strong> MR12, победа до 13. Овертайм MR3.</li>
+          <li><strong>Пик карт:</strong> knife round → бан/пик. Финал — полный veto.</li>
+          <li><strong>Состав:</strong> 5 основных + 1 запасной. Ник должен совпадать с игрой.</li>
+          <li><strong>Фейр-плей:</strong> читы, макросы и аккаунт-шаринг — дисквалификация без выплаты.</li>
+        </ul>
+        <aside class="intel">
+          <h3>Разведданные</h3>
+          <p>Турнир неофициальный, community-кубок. Организаторы не аффилированы с Axlebolt. Играй честно, держи связь в Discord и будь в лобби за 10 минут до матча.</p>
+          <p class="tag">VOICE · DISCORD · LIVE CAST</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="schedule" class="section">
+      <header class="section-head">
+        <p>Таймлайн</p>
+        <h2>Расписание кубка</h2>
+      </header>
+      <ol class="timeline">
+        <li>
+          <time>01–07 ноября</time>
+          <h3>Открытая регистрация</h3>
+          <p>Заявки команд, проверка составов, посев по рейтингу капитанов.</p>
+        </li>
+        <li>
+          <time>08 ноября · 18:00 МСК</time>
+          <h3>1/8 финала</h3>
+          <p>BO1. Восемь матчей. Кто не закрыл карту — вылетает.</p>
+        </li>
+        <li>
+          <time>09 ноября · 18:00 МСК</time>
+          <h3>Четвертьфиналы и полуфиналы</h3>
+          <p>Четверть — BO1. Полуфинал — BO3. В финал выходят двое.</p>
+        </li>
+        <li>
+          <time>10 ноября · 19:00 МСК</time>
+          <h3>Гранд-финал</h3>
+          <p>BO3 за 9 000 ₽ и кубок. Параллельно матч за 3 место.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="maps" class="section alt">
+      <header class="section-head">
+        <p>Пул карт</p>
+        <h2>Где будет идти стрельба</h2>
+      </header>
+      <div class="maps">
+        <article><span>01</span><h3>Sandstone</h3><p>Средние дистанции, смоки на B</p></article>
+        <article><span>02</span><h3>Province</h3><p>Тесные улицы, агрессивный mid</p></article>
+        <article><span>03</span><h3>Rust</h3><p>Вертикаль, пики с крыш</p></article>
+        <article><span>04</span><h3>Sakura</h3><p>Контроль окон и ротации</p></article>
+        <article><span>05</span><h3>Breeze</h3><p>Дальние углы, AWP-позиции</p></article>
+        <article><span>06</span><h3>Zone 9</h3><p>Закрытые коридоры, execute</p></article>
+      </div>
+    </section>
+
+    <section id="register" class="section">
+      <header class="section-head">
+        <p>Заявка</p>
+        <h2>Регистрация команды</h2>
+      </header>
+      <div class="register-wrap">
+        <form id="reg-form" class="form">
+          <label>Название команды
+            <input name="team" required maxlength="32" placeholder="например, NIGHT OPS" />
+          </label>
+          <label>Капитан (ник в SO2)
+            <input name="captain" required maxlength="24" placeholder="Nick#0000" />
+          </label>
+          <label>Discord капитана
+            <input name="discord" required maxlength="40" placeholder="username" />
+          </label>
+          <label>Состав через запятую
+            <input name="roster" required placeholder="игрок1, игрок2, игрок3, игрок4, игрок5" />
+          </label>
+          <button class="btn btn-primary" type="submit">Отправить заявку</button>
+          <p class="form-note">Заявка сохраняется на этом устройстве. Организатор свяжется в Discord.</p>
+        </form>
+        <div class="roster-board">
+          <h3>Зарегистрированные отряды</h3>
+          <ul id="teams"></ul>
+          <p id="teams-empty" class="muted">Пока тихо. Первая команда открывает сетку.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>SO2 CUP · community tournament · призовой фонд 15 000 ₽</p>
+    <p>Не является официальным продуктом Axlebolt / Standoff 2.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
